@@ -3,14 +3,44 @@
         <title>Hard Math Problems</title>
     </head>
     <body>
-        <h1><a href="https://learn.geobattery.com/">Pizza Edition (WORKING)</a></h1>
-        <h1><a href="https://gmsmedia.pics">Red's Exploit Center</a></h1>
-        <h1><a href="https://grantkot.com/ll">Liquid Layers</a></h1>
-        <h1><a href="https://hoodamath.com/">Hooda Math</a></h1>
-        <h1><a href="https://sites.google.com/view/classroom6x/">Classroom 6x</a></h1>
-        <h1><a href="https://tutor.mathstudyclassroom.com/index.html">FreezeNova</a></h1>
-        <h1><a href="https://77pen.github.io/">77Games</a></h1>
-        <h1><a href="https://gladihoppers-pro.github.io/go/class-414.html">Gladihoppers</a></h1>
-        <h1><a href="https://eaglercraft1-8.github.io/">EaglerCraft</a></h1>
+        <div id="mask">
+            <h1>Hard Math Problems</h1>
+            <h3>HardMathProblems is a wip website.</h3>
+        </div>
+        <div id="btn"><button id="unmask"></button></div>
+        <div id="website">
+            <h1><a href="https://learn.geobattery.com/">Pizza Edition (WORKING)</a></h1>
+            <h1><a href="https://gmsmedia.pics">Red's Exploit Center</a></h1>
+            <h1><a href="https://grantkot.com/ll">Liquid Layers</a></h1>
+            <h1><a href="https://hoodamath.com/">Hooda Math</a></h1>
+            <h1><a href="https://sites.google.com/view/classroom6x/">Classroom 6x</a></h1>
+            <h1><a href="https://tutor.mathstudyclassroom.com/index.html">FreezeNova</a></h1>
+            <h1><a href="https://77pen.github.io/">77Games</a></h1>
+            <h1><a href="https://gladihoppers-pro.github.io/go/class-414.html">Gladihoppers</a></h1>
+            <h1><a href="https://eaglercraft1-8.github.io/">EaglerCraft</a></h1>
+        </div>
+        <style>
+            #btn {
+                border-radius: 50%;
+                background-color: FFFFFF;
+                opacity: 5%;
+                width: 15px;
+                height 15px;
+            }
+        </style>
+        <script>
+            unmask = document.getElementById("unmask")
+            mask = document.getElementById("mask")
+            btn = document.getElementById("btn")
+            website = document.getElementById("website")
+            
+            website.hidden = true
+            
+            unmask.addEventListener("click", function() {
+                mask.hidden = true
+                btn.hidden = true
+                website.hidden = false
+            })
+        </script>
     </body>
 </html>
