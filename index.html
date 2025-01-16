@@ -9,15 +9,15 @@
         </div>
         <div id="btn"><button id="unmask"></button></div>
         <div id="website">
-            <h1><a href="https://learn.geobattery.com/">Pizza Edition (WORKING)</a></h1>
-            <h1><a href="https://gmsmedia.pics">Red's Exploit Center</a></h1>
-            <h1><a href="https://grantkot.com/ll">Liquid Layers</a></h1>
-            <h1><a href="https://hoodamath.com/">Hooda Math</a></h1>
-            <h1><a href="https://sites.google.com/view/classroom6x/">Classroom 6x</a></h1>
-            <h1><a href="https://tutor.mathstudyclassroom.com/index.html">FreezeNova</a></h1>
-            <h1><a href="https://77pen.github.io/">77Games</a></h1>
-            <h1><a href="https://gladihoppers-pro.github.io/go/class-414.html">Gladihoppers</a></h1>
-            <h1><a href="https://eaglercraft1-8.github.io/">EaglerCraft</a></h1>
+            <button onclick="openWindow(`https://learn.geobattery.com/`)">Pizza Edition (WORKING)</button>
+            <button onclick="openWindow(`https://gmsmedia.pics`)">Red's Exploit Center</button>
+            <button onclick="openWindow(`https://grantkot.com/ll`)">Liquid Layers</button>
+            <button onclick="openWindow(`https://hoodamath.com/`)">Hooda Math</button>
+            <button onclick="openWindow(`https://sites.google.com/view/classroom6x/`)">Classroom 6x</button>
+            <button onclick="openWindow(`https://tutor.mathstudyclassroom.com/index.html`)">FreezeNova</button>
+            <button onclick="openWindow('https://77pen.github.io/')">77Games</button>
+            <button onclick="openWindow(`https://gladihoppers-pro.github.io/go/class-414.html`)">Gladihoppers</button>
+            <button onclick="openWindow(`https://eaglercraft1-8.github.io/`)">EaglerCraft</button>
         </div>
         <style>
             #btn {
@@ -41,6 +41,12 @@
                 btn.hidden = true
                 website.hidden = false
             })
+            function openWindow(url) {
+                var windoww = window.open("about:blank", "_blank")
+                windoww.document.write(`
+                    <iframe src="${url}" width="1350" height="750" frameborder="0">
+                `)
+            }
         </script>
     </body>
 </html>
