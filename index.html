@@ -5,7 +5,9 @@
     <body>
         <div id="mask">
             <h1>Hard Math Problems</h1>
-            <h3>HardMathProblems is a wip website.</h3>
+            <h1 id="equation"></h1>
+            <input id="guess" placeholder="Enter Answer...">
+            <button id="answer">Answer</button>
         </div>
         <div id="btn"><button id="unmask"></button></div>
         <div id="website">
@@ -29,6 +31,30 @@
                 height 15px;
             }
         </style>
+        <script>
+            // Hard Problems
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * max);
+            }
+            var equation = document.getElementById("equation")
+            var guess = document.getElementById("guess")
+            var answer = document.getElementById("answer")
+    
+            var addend = getRandomInt(1500)
+            var augend = getRandomInt(1500)
+            var multiplier = getRandomInt(10)
+    
+            equation.innerHTML = "(" + addend + " + " + augend + ") * " + multiplier
+            answer.addEventListener("click", function() {
+                if (parseInt(guess.value) == (addend + augend) * multiplier) {
+                    equation.innerHTML = "Correct!"
+                    location.reload()
+                } else {
+                    equation.innerHTML = "Wrong!"
+                    location.reload()
+                }
+            })
+        </script>
         <script>
             unmask = document.getElementById("unmask")
             mask = document.getElementById("mask")
